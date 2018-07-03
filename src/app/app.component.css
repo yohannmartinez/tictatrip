@@ -1,0 +1,113 @@
+.contAll{
+    display:flex;
+    margin-top:20px;
+    margin-left:50%;
+    transform:translate(-50%);
+}
+
+/* les trois containers */
+.containerSearchBar{
+    background-color:white;
+    padding:10px;
+    border-radius:5px;
+    display:inline-block;
+    font-family:Arial;
+    font-size:12px;
+    color:rgb(43, 43, 43);
+    font-family: 'Roboto Condensed', sans-serif;  
+    flex:1;  
+    max-width:200px;
+    max-height:80px;
+}
+
+.containerProposition{
+    background-color:white;
+    padding:10px;
+    border-radius:5px;
+    display:inline-block;
+    font-family:Arial;
+    font-size:12px;
+    color:rgb(43, 43, 43);
+    font-family: 'Roboto Condensed', sans-serif;
+    flex:1;
+    margin-left:20px;
+    position:relative;
+    max-width:700px
+}
+
+.containerProposition::after{
+    content: "";
+    background-color:white;
+    height:10px;
+    width:10px;
+    position:absolute;
+    left:0;
+    top:20px;
+    z-index:40;
+    transform: translate(-50%,-50%)rotate(45deg);
+
+}
+
+.containerBests{
+    background-color:white;
+    padding:10px;
+    border-radius:5px;
+    display:inline-block;
+    font-family:Arial;
+    font-size:12px;
+    color:rgb(43, 43, 43);
+    text-align:center;
+    font-family: 'Roboto Condensed', sans-serif;
+    position:relative;
+    left:50%;
+    transform: translate(-50%);
+    margin-top:20px;
+}
+
+/* les trois containers */
+
+
+/* autres éléments */
+
+.input{
+    border:0.5px solid red;
+    border-radius:5px;
+    display:block;
+    padding:5px;
+    margin-top:10px;
+    font-family:Arial;
+    font-size:12px;
+    color:rgb(43, 43, 43);
+    font-family: 'Roboto Condensed', sans-serif;
+    
+}
+
+.titleBests{
+    font-weight:bold;
+    font-size:20px;
+}
+
+.input{
+    border:0.5px solid red;
+}
+
+input:focus{
+    outline:none;
+}
+
+.cityButton{
+    background-color:white;
+    border:1px solid black;
+    margin:5px;
+    cursor:pointer;
+    font-family: 'Roboto Condensed', sans-serif;
+    padding:5px;
+    border-radius:3px;
+}
+
+.titlecontainers{
+    padding:5px;
+    display:block;
+}
+
+/* autres éléments */
