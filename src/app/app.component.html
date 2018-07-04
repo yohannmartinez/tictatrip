@@ -1,18 +1,35 @@
-<div class="containerBests">
-  <p class="titleBests">Les Destinations favorites !</p>
-  <button *ngFor="let best of bests" class="cityButton" (click)="ville = best.unique_name; onSearchChange(ville)">{{ best.unique_name }}</button>
+<!-- navbar -->
+
+<div class="navbar">
+  <span class="logo">TICTACTRIP</span>
 </div>
 
+<!-- navbar -->
+
+<div class="slogan">
+  <span class="titleslogan">Réservez vos billets de train et de bus.
+    <br> En France et en Europe.</span>
+  <span>Voyagez avec Tictatrip, leader indépendant de la vente de billets de train et de bus en Europe.</span>
+</div>
+
+<div class="background"></div>
+
 <div class="contAll">
-
-  <div class="containerSearchBar">
+  <div class="containerSearchBar" >
     <span class="titlecontainers">Entrez une ville :</span>
-    <input class="input" id="input" [(ngModel)]="ville" (input)="onSearchChange($event.target.value)" required>
+    <input class="input" id="input" placeholder="Saisissez votre gare de départ..." [(ngModel)]="ville" (input)="onSearchChange($event.target.value)" required>
+    <input class="input" id="input" placeholder="Saisissez votre gare de d'arrivée..." [(ngModel)]="villeRetour" (input)="onSearchChange($event.target.value)" required>
+    <button class="boutonReserver">RESERVER</button>
   </div>
 
-  <div class="containerProposition" >
-    <span class="titlecontainers">Choisissez une gare de départ :</span>
-    <button class="cityButton" *ngFor="let proposition of propositions" (click)="ville = proposition.unique_name; onSearchChange(ville)">{{ proposition.unique_name }}</button>
+  <div class="containerProposition" *ngIf="propositions">
+    <span class="titlecontainers">Choisissez une Destination de départ :</span>
+    <button class="cityButton" *ngFor="let proposition of propositions" (click)="ville = proposition.unique_name; onSearchChange(ville)">
+      <i class="fas fa-map-marker-alt"></i> {{ proposition.unique_name }}</button>
   </div>
 
+  <div class="containerBests" >
+    <span class="titlecontainers">Les Destinations favorites !</span>
+    <button *ngFor="let best of bests" class="cityButton" (click)="ville = best.unique_name; onSearchChange(ville)"><i class="fas fa-map-marker-alt"></i> {{ best.unique_name }}</button>
+  </div>
 </div>
